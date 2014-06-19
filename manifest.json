@@ -1,0 +1,24 @@
+{
+  "name": "Serial Connection",
+  "description": "My first Chrome App.",
+  "version": "0.1",
+  "manifest_version": 2,
+  "permissions": [
+    "usb",
+    {
+    "usbDevices": [
+    {
+      "vendorId": 9025,
+      "productId": 67
+    }
+    ]
+    }],
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+    },
+    "icons": { "128": "nodecopter.png" }
+  }
+
+
