@@ -1,24 +1,27 @@
 {
-  "name": "Serial Connection",
-  "description": "My first Chrome App.",
-  "version": "0.1",
-  "manifest_version": 2,
-  "permissions": [
-    "usb",
-    {
-    "usbDevices": [
-    {
-      "vendorId": 9025,
-      "productId": 67
-    }
-    ]
-    }],
-  "app": {
-    "background": {
-      "scripts": ["background.js"]
-    }
+    "name": "Serial and Usb Connect",
+    "description": "Link up devices to the web to control drones!",
+    "version": "0.1",
+    "manifest_version": 2,
+
+    "permissions": [
+        "serial",
+        "usb", {
+            "usbDevices": [{
+                "vendorId": 9025,
+                "productId": 67
+            }, {
+                "vendorId": 9025,
+                "productId": 1
+            }]
+        }
+    ],
+    "app": {
+        "background": {
+            "scripts": ["background.js"]
+        }
     },
-    "icons": { "128": "nodecopter.png" }
-  }
-
-
+    "icons": {
+        "128": "nodecopter.png"
+    }
+}
